@@ -5,19 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras geométricas</title>
-    <style>
-        body {
-            background-color: #343333;
-            color: whitesmoke;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Figuras geométricas</h1>
     </header>
     <main>
-
+        <section class="main-figuras">
+            <figure>
+                <img src="./img/cuadrado.png" alt="cuadrado" srcset="">
+                <figcaption>Cuadrado</figcaption>
+                <article>
+                    <label for="lados">
+                        <span>¿Cuánto mide un lado del cuadrado?</span>
+                        <br>
+                        <input type="text" id="lados" class="input">                 
+                    </label>
+                    <br>
+                    <input type="button" value="Calcular" id="calculaCuadrado">
+                    <p id="resultadoCuadrado"></p>
+                </article>
+            </figure>
+            <figure>
+                <img src="./img/triangulo.png" alt="triangulo" srcset="">
+                <figcaption>Triangulo</figcaption>
+                <article>
+                    <label for="lado1">
+                        <span>¿Cuánto mide el primer lado del triangulo?</span>
+                        <br>
+                        <input type="text" id="lado1" class="input">
+                    </label>
+                    <br>
+                    <label for="lado2">
+                        <span>¿Cuánto mide el segundo lado del triangulo?</span>
+                        <br>
+                        <input type="text" id="lado2" class="input">
+                    </label>
+                    <br>
+                    <label for="base">
+                        <span>¿Cuánto mide la base del triangulo del triangulo?</span>
+                        <br>
+                        <input type="text" id="base" class="input">
+                    </label>
+                    <br>
+                    <input type="button" value="Calcular" id="calculaTriangulo">
+                    <p id="resultadoTriangulo"></p>
+                </article>
+            </figure>
+            <figure>
+                <img src="./img/circulo.png" alt="circulo" srcset="">
+                <figcaption>Circulo</figcaption>
+                <article>
+                    <label for="radio">
+                        <span>¿Cuánto mide el radio del circulo?</span>
+                        <br>
+                        <input type="text" id="radio" class="input">
+                    </label>
+                    <br>
+                    <input type="button" value="Calcular" id="calculaCirculo">
+                    <p id="resultadoCirculo"></p>
+                </article>
+            </figure>
+        </section>
     </main>
     <script src="figuras.js"></script>
 </body>

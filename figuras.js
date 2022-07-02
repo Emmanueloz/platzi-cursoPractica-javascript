@@ -1,5 +1,19 @@
 // Código del cuadrado
-console.group("Cuadrado")
+function calculoCuadrado() { 
+    let l = document.getElementById("lados");
+    let ladoCuadrado = parseInt(l.value);
+    let perimetryCuadrado = ladoCuadrado * 4;
+    let areaCuadrado = ladoCuadrado * ladoCuadrado;
+    console.log(`El perímetro del cuadrado es: ${perimetryCuadrado}, y su area es: ${areaCuadrado}`);
+    resultadoCuadrado.innerHTML = `El perímetro del cuadrado es: <b>${perimetryCuadrado}</b> <br> El area del cuadrado es: <b>${areaCuadrado}</b>`;
+}
+
+let bottomCuadrado = document.getElementById("calculaCuadrado");
+bottomCuadrado.addEventListener("click", calculoCuadrado);
+
+let resultadoCuadrado = document.getElementById("resultadoCuadrado");
+
+/* console.group("Cuadrado")
 const ladoCuadrado = 5;
 
 console.log(`Los lados del cuadrado miden: ${ladoCuadrado}cm`);
@@ -49,4 +63,4 @@ console.log(`El perímetro del circulo es: ${perimetryCirculo}cm`);
 const areaCirculo =  (radioCirculo * radioCirculo) * PI;
 
 console.log(`El area del circulo es: ${areaCirculo}cm²`);
-console.groupEnd()
+console.groupEnd() */

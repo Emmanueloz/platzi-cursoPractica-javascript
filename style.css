@@ -1,0 +1,41 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343333;
+    color: whitesmoke;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+main .main-figuras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+main .main-figuras figure {
+    margin: 0 auto;
+}
+
+main .main-figuras img{
+    width: 300px;
+    margin: 0 auto;
+}
+
+main .main-figuras figcaption {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .main-figuras .input{
+    background-color: #343333;
+    margin-top: 10px;
+    color: whitesmoke;
+}
