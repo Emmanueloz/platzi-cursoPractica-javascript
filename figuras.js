@@ -5,7 +5,7 @@ function calculoCuadrado() {
     let perimetryCuadrado = ladoCuadrado * 4;
     let areaCuadrado = ladoCuadrado * ladoCuadrado;
     console.log(`El perímetro del cuadrado es: ${perimetryCuadrado}, y su area es: ${areaCuadrado}`);
-    resultadoCuadrado.innerHTML = `El perímetro del cuadrado es: <b>${perimetryCuadrado}</b>. <br> El area del cuadrado es: <b>${areaCuadrado}</b>.`;
+    resultadoCuadrado.innerHTML = `El perímetro del cuadrado es: <b>${perimetryCuadrado}cm</b>. <br> El area del cuadrado es: <b>${areaCuadrado}cm²</b>.`;
 }
 
 let bottomCuadrado = document.getElementById("calculaCuadrado");
@@ -24,8 +24,8 @@ function calculaTriangulo() {
     let perimetryTriangulo = lado1 + lado2 + base;
     let resultadoArea = areaTriangulo(lado1, lado2, base);
     console.log(`Perímetro: ${perimetryTriangulo }, area: ${resultadoArea}`);
-    resultadoTriangulo.innerHTML = `El perímetro del triangulo es: <b>${perimetryTriangulo}</b>. 
-    <br> El area del triangulo es: <b>${resultadoArea}</b>.`;
+    resultadoTriangulo.innerHTML = `El perímetro del triangulo es: <b>${perimetryTriangulo}cm</b>. 
+    <br> El area del triangulo es: <b>${resultadoArea}cm²</b>.`;
 }
 
 function areaTriangulo(ladoA, ladoB, ladoC) {
@@ -48,9 +48,9 @@ function calculaCirculo(){
     let perimetryCirculo = PI * diameter;
     let areaCirculo = (radio * radio) * PI;
     console.log(`Radio: ${radio}, Diámetro: ${diameter}, Perímetro: ${perimetryCirculo}, Area: ${areaCirculo}`);
-    resultadoCirculo.innerHTML = `El diámetro del circulo es <b>${diameter}</b>.
-    <br>El perímetro del circulo es: <b>${perimetryCirculo}</b>. 
-    <br> El area del circulo es: <b>${areaCirculo}</b>.`;
+    resultadoCirculo.innerHTML = `El diámetro del circulo es <b>${diameter}cm</b>.
+    <br>El perímetro del circulo es: <b>${perimetryCirculo}cm</b>. 
+    <br> El area del circulo es: <b>${areaCirculo}cm²</b>.`;
 }
 
 const PI = Math.PI;

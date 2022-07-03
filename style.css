@@ -38,4 +38,9 @@ main .main-figuras .input{
     background-color: #343333;
     margin-top: 10px;
     color: whitesmoke;
+    width: 100px;
+}
+
+main .main-figuras p {
+    display: inline-block;
 }
