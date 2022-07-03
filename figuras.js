@@ -42,18 +42,19 @@ console.groupEnd()
 
 // Código del circulo
 console.group("Circulo")
-/* const radioCirculo = 4;
-const diameterCirculo = radioCirculo * 2;
-
-console.log(`El radio y diámetro del circulo es: ${radioCirculo}cm, ${diameterCirculo}cm`); */
-const PI = Math.PI;
-
-function perimetryCirculo(radio){
-    let diameter = radio * 2;
-    return diameter * PI;
+// Diámetro 
+function diameterCirculo(radio){
+    return radio * 2;
 }
 
-// console.log(`El perímetro del circulo es: ${perimetryCirculo}cm`);
+// PI
+const PI = Math.PI;
+console.log(`PI es: ${PI}`);
+
+function perimetryCirculo(radio){
+    const diameter = diameterCirculo(radio);
+    return diameter * PI;
+}
 
 function areaCirculo(radio){
     return (radio * radio) * PI
