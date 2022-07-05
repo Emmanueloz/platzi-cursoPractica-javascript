@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras geométricas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Figuras geométricas</h1>
+      <h1>Figuras geométricas</h1>
     </header>
     <main>
-        <section class="main-figuras">
-            <figure>
-                <img src="./img/cuadrado.png" alt="cuadrado" srcset="">
-                <figcaption>Cuadrado</figcaption>
-                <article>
-                    <label for="lados">
-                        <span>¿Cuánto mide un lado del cuadrado?</span>
-                        <br>
-                        <input type="text" id="lados" class="input">
-                        <p>cm</p>                
-                    </label>
-                    <br>
-                    <input type="button" value="Calcular" id="calculaCuadrado">
-                    <p id="resultadoCuadrado"></p>
-                </article>
-            </figure>
-            <figure>
-                <img src="./img/triangulo.png" alt="triangulo" srcset="">
-                <figcaption>Triangulo</figcaption>
-                <article>
-                    <label for="lado1">
-                        <span>¿Cuánto mide el primer lado del triangulo?</span>
-                        <br>
-                        <input type="text" id="lado1" class="input">
-                        <p>cm</p> 
-                    </label>
-                    <br>
-                    <label for="lado2">
-                        <span>¿Cuánto mide el segundo lado del triangulo?</span>
-                        <br>
-                        <input type="text" id="lado2" class="input">
-                        <p>cm</p> 
-                    </label>
-                    <br>
-                    <label for="base">
-                        <span>¿Cuánto mide la base del triangulo del triangulo?</span>
-                        <br>
-                        <input type="text" id="base" class="input">
-                        <p>cm</p> 
-                    </label>
-                    <br>
-                    <input type="button" value="Calcular" id="calculaTriangulo">
-                    <p id="resultadoTriangulo"></p>
-                </article>
-            </figure>
-            <figure>
-                <img src="./img/circulo.png" alt="circulo" srcset="">
-                <figcaption>Circulo</figcaption>
-                <article>
-                    <label for="radio">
-                        <span>¿Cuánto mide el radio del circulo?</span>
-                        <br>
-                        <input type="text" id="radio" class="input">
-                        <p>cm</p> 
-                    </label>
-                    <br>
-                    <input type="button" value="Calcular" id="calculaCirculo">
-                    <p id="resultadoCirculo"></p>
-                </article>
-            </figure>
+      <section class="main-figuras">
+        <section class="main-figuras__section">
+          <figure>
+            <img src="./img/cuadrado.png" alt="cuadrado" srcset="" />
+            <figcaption>Cuadrado</figcaption>
+          </figure>
+          <label for="lados">
+            <span>¿Cuánto mide un lado del cuadrado?</span>
+            <br />
+            <input type="text" id="lados" class="input" />
+            <p>cm</p>
+          </label>
+          <br />
+          <p>Calcular:</p>
+          <button id="buttonPerimetryCuadrado">Perímetro</button>
+          <p id="resultadoPerimetryCuadrado"></p>
+          <button id="buttonAreaCuadrado">Area</button>
+          <p id="resultadoAreaCuadrado"></p>
         </section>
+        <section class="main-figuras__section">
+          <figure>
+            <img src="./img/triangulo.png" alt="triangulo" srcset="" />
+            <figcaption>Triangulo</figcaption>
+          </figure>
+          <label for="lado1">
+            <span>¿Cuánto mide el primer lado del triangulo?</span>
+            <br />
+            <input type="text" id="lado1" class="input" />
+            <p>cm</p>
+          </label>
+          <br />
+          <label for="lado2">
+            <span>¿Cuánto mide el segundo lado del triangulo?</span>
+            <br />
+            <input type="text" id="lado2" class="input" />
+            <p>cm</p>
+          </label>
+          <br />
+          <label for="base">
+            <span>¿Cuánto mide la base del triangulo del triangulo?</span>
+            <br />
+            <input type="text" id="base" class="input" />
+            <p>cm</p>
+          </label>
+          <br />
+          <p>Calcular:</p>
+          <button id="buttonPerimetryTriangulo">Perímetro</button>
+          <p id="resultadoPerimetryTriangulo"></p>
+          <button id="buttonAreaTriangulo">Area</button>
+          <p id="resultadoAreaTriangulo"></p>
+        </section>
+        <section class="main-figuras__section">
+          <figure>
+            <img src="./img/circulo.png" alt="circulo" srcset="" />
+            <figcaption>Circulo</figcaption>
+          </figure>
+            <label for="radio">
+              <span>¿Cuánto mide el radio del circulo?</span>
+              <br />
+              <input type="text" id="radio" class="input" />
+              <p>cm</p>
+            </label>
+            <br />
+            <p>Calcular:</p>
+            <button id="buttonPerimetryCirculo">Perímetro</button>
+            <p id="resultadoPerimetryCirculo"></p>
+            <button id="buttonAreaCirculo">Area</button>
+            <p id="resultadoAreaCirculo"></p>
+        </section>
+      </section>
     </main>
     <script src="figuras.js"></script>
-</body>
+  </body>
 </html>

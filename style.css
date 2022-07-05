@@ -4,7 +4,7 @@ html{
 }
 
 body {
-    background-color: #343333;
+    background-color: #b5b2b2;
     color: whitesmoke;
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +12,8 @@ body {
 
 h1 {
     font-size: 2rem;
+    text-align: center;
+    color: #343333;
 }
 
 main .main-figuras {
@@ -20,27 +22,44 @@ main .main-figuras {
     grid-template-rows: 1fr;
 }
 
-main .main-figuras figure {
-    margin: 0 auto;
+main .main-figuras .main-figuras__section {
+    display: flex;
+    flex-direction: column;
+    background-color: #343333;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-main .main-figuras img{
-    width: 300px;
-    margin: 0 auto;
+main .main-figuras .main-figuras__section button {
+    width: 100px;
 }
 
-main .main-figuras figcaption {
+main .main-figuras .main-figuras__section figure {
+    display: flex;
+    align-items: center;
+}
+
+main .main-figuras .main-figuras__section figure img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+main .main-figuras .main-figuras__section figure figcaption {
     text-align: center;
     margin-bottom: 10px;
 }
 
-main .main-figuras .input{
+main .main-figuras .main-figuras__section .input{
     background-color: #343333;
     margin-top: 10px;
+    text-align: center;
     color: whitesmoke;
-    width: 100px;
+    width: 200px;
+    border-radius: 10px;
 }
 
-main .main-figuras p {
+main .main-figuras .main-figuras__section p {
     display: inline-block;
+    height: 40px;
 }

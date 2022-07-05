@@ -1,61 +1,95 @@
 // Código del cuadrado
-function calculoCuadrado() { 
-    let l = document.getElementById("lados");
-    let ladoCuadrado = parseInt(l.value);
-    let perimetryCuadrado = ladoCuadrado * 4;
-    let areaCuadrado = ladoCuadrado * ladoCuadrado;
-    console.log(`El perímetro del cuadrado es: ${perimetryCuadrado}, y su area es: ${areaCuadrado}`);
-    resultadoCuadrado.innerHTML = `El perímetro del cuadrado es: <b>${perimetryCuadrado}cm</b>. <br> El area del cuadrado es: <b>${areaCuadrado}cm²</b>.`;
+
+let resultadoPerimetryCuadrado = document.getElementById(
+  "resultadoPerimetryCuadrado"
+);
+let resultadoAreaCuadrado = document.getElementById("resultadoAreaCuadrado");
+// Datos de entrada del cuadrado
+
+function calculaPerimetryCuadrado() {
+  let l = document.getElementById("lados");
+  let ladoCuadrado = parseInt(l.value);
+  let perimetryCuadrado = ladoCuadrado * 4;
+  console.log(`Perímetro Cuadrado: ${perimetryCuadrado}`);
+  resultadoPerimetryCuadrado.innerHTML = `El perímetro es: <b>${perimetryCuadrado}cm</b>.`;
 }
 
-let bottomCuadrado = document.getElementById("calculaCuadrado");
-bottomCuadrado.addEventListener("click", calculoCuadrado);
+function calculaAreaCuadrado() {
+  let l = document.getElementById("lados");
+  let ladoCuadrado = parseInt(l.value);
+  let areaCuadrado = ladoCuadrado * ladoCuadrado;
+  console.log(`Area Cuadrado: ${areaCuadrado}`);
+  resultadoAreaCuadrado.innerHTML = `El area es: <b>${areaCuadrado}cm²</b>.`;
+}
 
-let resultadoCuadrado = document.getElementById("resultadoCuadrado");
+let buttonPerimetryCuadrado = document.getElementById(
+  "buttonPerimetryCuadrado"
+);
+buttonPerimetryCuadrado.addEventListener("click", calculaPerimetryCuadrado);
+let buttonAreaCuadrado = document.getElementById("buttonAreaCuadrado");
+buttonAreaCuadrado.addEventListener("click", calculaAreaCuadrado);
 
 // Código triangulo
-function calculaTriangulo() {
-    let ld1 = document.getElementById("lado1");
-    let lado1 = parseInt(ld1.value);
-    let ld2 = document.getElementById("lado2");
-    let lado2 = parseInt(ld2.value);
-    let ba = document.getElementById("base");
-    let base = parseInt(ba.value);
-    let perimetryTriangulo = lado1 + lado2 + base;
-    let resultadoArea = areaTriangulo(lado1, lado2, base);
-    console.log(`Perímetro: ${perimetryTriangulo }, area: ${resultadoArea}`);
-    resultadoTriangulo.innerHTML = `El perímetro del triangulo es: <b>${perimetryTriangulo}cm</b>. 
-    <br> El area del triangulo es: <b>${resultadoArea}cm²</b>.`;
+
+let resultadoPerimetryTriangulo = document.getElementById("resultadoPerimetryTriangulo");
+let resultadoAreaTriangulo = document.getElementById("resultadoAreaTriangulo");
+
+// Datos de entrada del triangulo
+
+function calculaPerimetryTriangulo() {
+  let ld1 = document.getElementById("lado1");
+  let lado1 = parseInt(ld1.value);
+  let ld2 = document.getElementById("lado2");
+  let lado2 = parseInt(ld2.value);
+  let ba = document.getElementById("base");
+  let base = parseInt(ba.value);
+  let perimetryTriangulo = lado1 + lado2 + base;
+  console.log(`Perímetro: ${perimetryTriangulo}`);
+  resultadoPerimetryTriangulo.innerHTML = `El perímetro es: <b>${perimetryTriangulo}cm</b>.`;
 }
 
-function areaTriangulo(ladoA, ladoB, ladoC) {
-    let S = (ladoA + ladoB + ladoC) / 2;
-    let multiplication = S * (S -ladoA) * (S - ladoB) * (S - ladoC);
-    let resultado = Math.sqrt(multiplication);
-    return resultado;
+function calculaAreaTriangulo() {
+  let ld1 = document.getElementById("lado1");
+  let lado1 = parseInt(ld1.value);
+  let ld2 = document.getElementById("lado2");
+  let lado2 = parseInt(ld2.value);
+  let ba = document.getElementById("base");
+  let base = parseInt(ba.value);
+  let S = (lado1 + lado2 + base) / 2;
+  let multiplication = S * (S - lado1) * (S - lado2) * (S - base);
+  let areaTriangulo = Math.sqrt(multiplication);
+  resultadoAreaTriangulo.innerHTML = `El Area es: <b>${areaTriangulo}cm²</b>.`;
 }
 
-let bottomTriangulo = document.getElementById("calculaTriangulo");
-bottomTriangulo.addEventListener("click", calculaTriangulo);
-
-let resultadoTriangulo = document.getElementById("resultadoTriangulo");
+let buttonPerimetryTriangulo = document.getElementById("buttonPerimetryTriangulo");
+buttonPerimetryTriangulo.addEventListener("click", calculaPerimetryTriangulo);
+let buttonAreaTriangulo = document.getElementById("buttonAreaTriangulo");
+buttonAreaTriangulo.addEventListener("click", calculaAreaTriangulo);
 
 // Código del circulo
-function calculaCirculo(){
-    let r = document.getElementById("radio");
-    let radio = parseInt(r.value);
-    let diameter = radio * 2;
-    let perimetryCirculo = PI * diameter;
-    let areaCirculo = (radio * radio) * PI;
-    console.log(`Radio: ${radio}, Diámetro: ${diameter}, Perímetro: ${perimetryCirculo}, Area: ${areaCirculo}`);
-    resultadoCirculo.innerHTML = `El diámetro del circulo es <b>${diameter}cm</b>.
-    <br>El perímetro del circulo es: <b>${perimetryCirculo}cm</b>. 
-    <br> El area del circulo es: <b>${areaCirculo}cm²</b>.`;
-}
 
+let resultadoPerimetryCirculo = document.getElementById("resultadoPerimetryCirculo");
+let resultadoAreaCirculo = document.getElementById("resultadoAreaCirculo");
 const PI = Math.PI;
 
-let bottomCirculo = document.getElementById("calculaCirculo");
-bottomCirculo.addEventListener("click", calculaCirculo);
+function calculaPerimetryCirculo(){
+  let r = document.getElementById("radio");
+  let radio = parseInt(r.value);
+  let diameter = radio * 2;
+  let perimetryCirculo = PI * diameter;
+  console.log(`Perímetro es: ${perimetryCirculo}`);
+  resultadoPerimetryCirculo.innerHTML = `El perímetro es: <b>${perimetryCirculo}cm</b>.`;
+}
 
-let resultadoCirculo = document.getElementById("resultadoCirculo");
+function calculaAreaCirculo(){
+  let r = document.getElementById("radio");
+  let radio = parseInt(r.value);
+  let areaCirculo = (radio * radio) * PI;
+  console.log(`Area es: ${areaCirculo}`);
+  resultadoAreaCirculo.innerHTML = `El Area es: <b>${areaCirculo}cm²</b>.`;
+}
+
+let buttonPerimetryCirculo = document.getElementById("buttonPerimetryCirculo");
+buttonPerimetryCirculo.addEventListener("click", calculaPerimetryCirculo);
+let buttonAreaCirculo = document.getElementById("buttonAreaCirculo");
+buttonAreaCirculo.addEventListener("click", calculaAreaCirculo);
