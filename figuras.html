@@ -10,6 +10,12 @@
             background-color: #343333;
             color: whitesmoke;
         }
+        p{
+          display: inline-block;
+        }
+        input {
+          width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -25,14 +31,19 @@
             Escribe cuánto mide cada lado de tu cuadrado:
           </label>
           <input id="InputCuadrado" type="number" />
+          <p>cm</p>
           <br>
           <button type="button" onclick="calcularPerimetryCuadrado()">
             Calcular el perímetro
           </button>
           <br>
+          <p id="resultadoCuadradoPerimetry"></p>
+          <br>
           <button type="button" onclick="calcularAreaCuadrado()">
             Calcular el área
           </button>
+          <br>
+          <p id="resultadoCuadradoArea"></p>
         </form>
       </section>
       <section>
@@ -42,28 +53,37 @@
             Escribe cuánto mide un lado del triangulo:
           </label>
           <input id="InputTriangulo01" type="number" />
+          <p>cm</p>
           <br>
           <label for="InputTriangulo02">
             Escribe cuánto mide el otro lado del triangulo:
           </label>
           <input id="InputTriangulo02" type="number" />
+          <p>cm</p>
           <br>
           <label for="InputTriangulo03">
             Escribe cuánto mide la base del triangulo:
           </label>
           <input id="InputTriangulo03" type="number" />
+          <p>cm</p>
           <br>
           <button type="button" onclick="calcularPerimetryTriangulo()">
             Calcular el perímetro
           </button>
           <br>
+          <p id="resultadoTrianguloPerimetry"></p>
+          <br>
           <button type="button" onclick="calcularAlturaTriangulo()">
             Calcular la altura
           </button>
           <br>
+          <p id="resultadoTrianguloAltura"></p>
+          <br>
           <button type="button" onclick="calcularAreaTriangulo()">
             Calcular el área
           </button>
+          <br>
+          <p id="resultadoTrianguloArea"></p>
         </form>
       </section>
       <section>
@@ -73,14 +93,19 @@
             Escribe cuánto mide el radio del circulo
           </label>
           <input id="InputCirculo" type="number" />
+          <p>cm</p>
           <br>
           <button type="button" onclick="calcularPerimetryCirculo()">
             Calcular el perímetro
           </button>
           <br>
+          <p id="resultadoCirculoPerimetry"></p>
+          <br>
           <button type="button" onclick="calcularAreaCirculo()">
             Calcular el área
           </button>
+          <br>
+          <p id="resultadoCirculoArea"></p>
         </form>
       </section>
     </main>

@@ -73,22 +73,30 @@ console.groupEnd()
 
 // Aquí interactuamos con el HTML
 // Cuadrado
+let rCuP = document.getElementById("resultadoCuadradoPerimetry");
+let rCuA = document.getElementById("resultadoCuadradoArea")
+
 function calcularPerimetryCuadrado() {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
 
   const perimetry = perimetryCuadrado(value);
-  alert(perimetry);
+  //alert(perimetry);
+  rCuP.innerHTML = `El perímetro de cuadrado es: <b>${perimetry}cm</b>`;
 }
 function calcularAreaCuadrado() {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
 
   const area = areaCuadrado(value);
-  alert(area);
+  //alert(area);
+  rCuA.innerHTML = `El área del cuadrado es <b>${area}cm²</b>`;
 }
 
 // Triangulo
+let rTrP = document.getElementById("resultadoTrianguloPerimetry");
+let rTrAl = document.getElementById("resultadoTrianguloAltura");
+let rTrAr = document.getElementById("resultadoTrianguloArea");
 
 function calcularPerimetryTriangulo(){
   const input01 = document.getElementById("InputTriangulo01");
@@ -102,7 +110,8 @@ function calcularPerimetryTriangulo(){
   const base = parseInt(valuebase);
   
   const perimetry = perimetryTriangulo(lado1, lado2, base);
-  alert(perimetry);
+  //alert(perimetry);
+  rTrP.innerHTML = `El perímetro del triangulo es <b>${perimetry}cm</b>`;
 }
 
 function calcularAlturaTriangulo(){
@@ -117,7 +126,8 @@ function calcularAlturaTriangulo(){
   const base = parseInt(valuebase);
   
   const altura = alturaTriangulo(lado1, lado2, base);
-  alert(altura);
+  //alert(altura);
+  rTrAl.innerHTML = `La altura del triangulo es: <b>${altura}cm</b>`;
 }
 
 function calcularAreaTriangulo(){
@@ -132,8 +142,13 @@ function calcularAreaTriangulo(){
   const base = parseInt(valuebase);
   
   const area = areaTriangulo(lado1, lado2, base);
-  alert(area);
+  //alert(area);
+  rTrAr.innerHTML = `El área del triangulo es: <b>${area}cm²</b>`;
 }
+
+// Circulo
+let rCiP = document.getElementById("resultadoCirculoPerimetry");
+let rCiA = document.getElementById("resultadoCirculoArea");
 
 function calcularPerimetryCirculo() {
   const input = document.getElementById("InputCirculo");
@@ -141,7 +156,8 @@ function calcularPerimetryCirculo() {
   const radio = parseInt(value);
 
   const perimetry = perimetryCirculo(radio);
-  alert(perimetry);
+  //alert(perimetry);
+  rCiP.innerHTML = `El perímetro del circulo es <b>${perimetry}cm</b>`
 }
 
 function calcularAreaCirculo() {
@@ -150,5 +166,6 @@ function calcularAreaCirculo() {
   const radio = parseInt(value);
 
   const area = areaCirculo(radio);
-  alert(area);
+  //alert(area);
+  rCiA.innerHTML = `El área del circulo es <b>${area}cm²</b>`
 }
