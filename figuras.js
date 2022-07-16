@@ -134,3 +134,21 @@ function calcularAreaTriangulo(){
   const area = areaTriangulo(lado1, lado2, base);
   alert(area);
 }
+
+function calcularPerimetryCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+  const radio = parseInt(value);
+
+  const perimetry = perimetryCirculo(radio);
+  alert(perimetry);
+}
+
+function calcularAreaCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+  const radio = parseInt(value);
+
+  const area = areaCirculo(radio);
+  alert(area);
+}
