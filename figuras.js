@@ -32,10 +32,18 @@ function perimetryTriangulo(ladoA, ladoB, ladoC){
     return ladoA + ladoB + ladoC;
 }
 
+function alturaTriangulo(lado1, lado2, base){
+  let area = areaTriangulo(lado1, lado2, base)
+  return (2 * area) / base
+}
+
 //console.log(`El perímetro del triangulo es: ${perimetryTriangulo}cm`);
 
-function areaTriangulo(base, altura){
-    return (base + altura) / 2;
+function areaTriangulo(lado1, lado2, base){
+  let S = (lado1 + lado2 + base) / 2;
+  let multiplication = S * (S - lado1) * (S - lado2) * (S - base);
+  let areaTriangulo = Math.sqrt(multiplication);
+  return areaTriangulo;
 }
 // console.log(`El area del triangulo es: ${areaTriangulo}cm²`);
 console.groupEnd()
@@ -62,3 +70,67 @@ function areaCirculo(radio){
 
 // console.log(`El area del circulo es: ${areaCirculo}cm²`);
 console.groupEnd()
+
+// Aquí interactuamos con el HTML
+// Cuadrado
+function calcularPerimetryCuadrado() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const perimetry = perimetryCuadrado(value);
+  alert(perimetry);
+}
+function calcularAreaCuadrado() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const area = areaCuadrado(value);
+  alert(area);
+}
+
+// Triangulo
+
+function calcularPerimetryTriangulo(){
+  const input01 = document.getElementById("InputTriangulo01");
+  const value01 = input01.value;
+  const lado1 = parseInt(value01);
+  const input02 = document.getElementById("InputTriangulo02");
+  const value02 = input02.value;
+  const lado2 = parseInt(value02)
+  const inputBase = document.getElementById("InputTriangulo03");
+  const valuebase = inputBase.value;
+  const base = parseInt(valuebase);
+  
+  const perimetry = perimetryTriangulo(lado1, lado2, base);
+  alert(perimetry);
+}
+
+function calcularAlturaTriangulo(){
+  const input01 = document.getElementById("InputTriangulo01");
+  const value01 = input01.value;
+  const lado1 = parseInt(value01);
+  const input02 = document.getElementById("InputTriangulo02");
+  const value02 = input02.value;
+  const lado2 = parseInt(value02)
+  const inputBase = document.getElementById("InputTriangulo03");
+  const valuebase = inputBase.value;
+  const base = parseInt(valuebase);
+  
+  const altura = alturaTriangulo(lado1, lado2, base);
+  alert(altura);
+}
+
+function calcularAreaTriangulo(){
+  const input01 = document.getElementById("InputTriangulo01");
+  const value01 = input01.value;
+  const lado1 = parseInt(value01);
+  const input02 = document.getElementById("InputTriangulo02");
+  const value02 = input02.value;
+  const lado2 = parseInt(value02)
+  const inputBase = document.getElementById("InputTriangulo03");
+  const valuebase = inputBase.value;
+  const base = parseInt(valuebase);
+  
+  const area = areaTriangulo(lado1, lado2, base);
+  alert(area);
+}
