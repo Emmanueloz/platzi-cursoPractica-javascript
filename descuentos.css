@@ -19,5 +19,8 @@ main {
 }
 
 main .formulario{
-  width: 5  00px;
+  border: 1px solid blue;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
 }
