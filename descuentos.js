@@ -51,14 +51,64 @@ function comparisonBucle(userCoupon, arrayCopones) {
   }
 }
 
+function aplicarDescuento(userCoupon) {
+  let descuento;
+  switch (userCoupon) {
+    case "coupon1":
+      descuento = 50;
+      break;
+    case "coupon2":
+      descuento = 10;
+      break;
+    case "coupon3":
+      descuento = 60;
+      break;
+    case "coupon4":
+      descuento = 80;
+      break;
+    case "coupon5":
+      descuento = 20;
+      break;
+    case "coupon6":
+      descuento = 10;
+      break;
+  }
+  return descuento
+}
+
 function comparison(userCoupon, arrayCopones) {
   let validation = comparisonBucle(userCoupon, arrayCopones);
 
   if (userCoupon === validation) {
-    console.log(`cupón valido ${userCoupon}`);
+    const descuento = aplicarDescuento(userCoupon)
+    return descuento;
   } else {
-    console.log(`cupón no valido ${userCoupon}`);
+    let message = "Cupón invalido"
+    return message;
   }
 }
 
-comparison("coupon5", cupones);
+function onClickButtonPriceDiscountCoupon(){
+  const inputPrice = document.getElementById("InputPriceCoupon");
+  const priceValue = inputPrice.value;
+
+  const inputDiscount = document.getElementById("InputCoupon");
+  const discountValue = inputDiscount.value;
+
+  const resultP = document.getElementById("ResultPC");
+
+  const discount = comparison(discountValue, cupones);
+  let precioConDescuento;
+
+  let numberDiscount = typeof(discount)
+  if (numberDiscount === "number") {
+    precioConDescuento = calcularPrecioConDescuento(priceValue, discount);
+    //console.log(precioConDescuento);
+    resultP.innerHTML = `El precio con descuento por tu cupón es: <b>$${precioConDescuento}</b>`;
+  }
+  else {
+    //console.log(discount);
+    resultP.innerHTML = `<b style="color:red" >Error: ${discount}</b>`
+  }
+
+}
