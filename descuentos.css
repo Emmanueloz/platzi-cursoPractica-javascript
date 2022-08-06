@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #8896a3;
+  color: #424242;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+
+main section{
+  width: 600px;
+  border: 1px solid #5d5dd3;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #b7bfc7;
+  box-shadow: 5px 5px 1 black;
+}
+
+main section form input {
+  font-size: 2rem;
+  background-color: aliceblue;
+}
+
+main section form button {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
