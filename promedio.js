@@ -1,0 +1,5 @@
+
+
+function calcularPromedio(){
+  alert("hola");
+}
