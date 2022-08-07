@@ -12,11 +12,15 @@
   </header>
   <main>
     <form action="">
-      <label for="">
-        <span></span>
-        <input type="number" name="" id="">
+      <label for="input">
+        <span>Agregar un numero a la lista a calcular promedio</span>
+        <input type="number" id="input">
       </label>
-      <button type="button" onclick="calcularPromedio()">Calcular promedio</button>
+      <br>
+      <button id="pushArray" type="button" onclick="agregarValor()">Agregar numero</button>
+      <p id="listaArray">Se mostrara los valores a calcular acá</p>
+      <button id="calculaPromedio" type="button" onclick="calcularPromedio()">Calcular promedio</button>
+      <p id="resultPromedio"></p>
     </form>
   </main>
   <script src="promedio.js"></script>
