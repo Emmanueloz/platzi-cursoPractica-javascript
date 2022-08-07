@@ -33,7 +33,7 @@ function agregarValor() {
     agregarEnArray(inputValue, arrayLista);
     console.log(arrayLista)
     for (lis of arrayLista) {
-      listaArray.innerHTML = `<li>${arrayLista}</li>`;
+      listaArray.innerHTML = `Valor: <br> ${arrayLista}`;
     } 
   }
 }
@@ -46,4 +46,10 @@ function calcularPromedio() {
   let promedio = calculaMediaArithmetic(arrayLista);
   console.log(promedio);
   resultPromedio.innerHTML = `El promedio es de ${promedio}`;
+}
+
+function resetarArray() {
+  listaArray.innerHTML = "Se mostrara los valores a calcular acá";
+  resultPromedio.innerHTML = "El promedio se mostrara aquí"
+  return arrayLista = [];
 }
