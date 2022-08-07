@@ -81,3 +81,9 @@ function calcularMediana() {
   let resultMediana = document.getElementById("resultMediana");
   resultMediana.innerHTML = `La mediana de la lista de números es de ${mediana}`
 }
+
+function resetarArray() {
+  listaArray.innerHTML = "Se mostrara los valores a calcular acá";
+  resultPromedio.innerHTML = "El promedio se mostrara aquí"
+  return arrayLista = [];
+}
