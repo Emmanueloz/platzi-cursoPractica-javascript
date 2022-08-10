@@ -1,34 +1,55 @@
-const lista1 = [
-  1,
-  2,
-  3,
-  1,
-  2,
-  3,
-  4,
-  2,
-  2,
-  2,
-  1,
-];
+let lista = [];
 // Objeto que muestre el valor y las veces que se repite
-const lista1Count = {}
+let listaCount = {};
 
-lista1.map(
-  function (elemento) {
-    if (lista1Count[elemento]) {
-      lista1Count[elemento] += 1;
-    }
-    else {
-      lista1Count[elemento] = 1;      
-    }
+// Resultado mostrado en el documento
+let listaDocumentArray = document.getElementById("listaArray");
+let resultModa = document.getElementById("resultModa");
+
+// Agrega elemento al array
+function agregarEnArray(nuevoValor, lista) {
+  return lista.push(nuevoValor);
+}
+
+function agregarValor() {
+  // Inputs del formulario
+  let input = document.getElementById("input");
+  let inputValue = parseInt(input.value);
+  if (isNaN(inputValue)) {
+    listaDocumentArray.innerHTML =
+      "<b style='color:red'>Coloca numero y no otro valor</b>";
+  } else {
+    agregarEnArray(inputValue, lista);
+    listaDocumentArray.innerHTML = `Valor: <br> ${lista} <br>`;
   }
-);
+}
 
-const lista1Array = Object.entries(lista1Count).sort(
-  function (valorAcumulado, nuevoValor) {
+function resetarArray() {
+  listaDocumentArray.innerHTML = "Se mostrara los valores a calcular acá";
+  resultModa.innerHTML = "La mediana se mostrara aquí"
+  return lista = [];
+}
+
+// Moda
+function calcularModa() {
+  lista.map(function (elemento) {
+    if (listaCount[elemento]) {
+      listaCount[elemento] += 1;
+    } else {
+      listaCount[elemento] = 1;
+    }
+  });
+  
+  let listaArray = Object.entries(listaCount).sort(function (
+    valorAcumulado,
+    nuevoValor
+  ) {
     return valorAcumulado[1] - nuevoValor[1];
-  }
-);
+  });
+  console.log(listaArray);
+  
+  let moda = listaArray[listaArray.length - 1];
+  console.log(moda[0]);
 
-const moda = lista1Array[lista1Array.length - 1];
+  resultModa.innerHTML = `La moda de esta lista es el numero: <b>${moda[0]}</b>, ya que se repite ${moda[1]} veces. <br>`
+}
