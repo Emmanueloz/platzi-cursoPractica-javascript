@@ -20,7 +20,8 @@ main {
 }
 
 main .formulario{
-  width: 400px;
+  min-width: 400px;
+  max-width: 500px;
   border: 1px solid blue;
   padding: 10px;
   border-radius: 10px;
@@ -30,7 +31,9 @@ main .formulario{
 
 main .formulario input{
   background-color:  cadetblue;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  padding-left: 20px;
   font-size: 1.8rem;
   margin-top: 10px;
   width: 350px;
@@ -38,11 +41,19 @@ main .formulario input{
 
 main .formulario button{
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 1.6rem;
 }
 
 main .formulario #resultadoAhorro {
   border: 1px solid snow;
-  height: 100px;
+  min-height: 100px;
   border-radius: 10px;
+}
+
+main .formulario #resultadoAhorro ul {
+  margin-left: 0px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: justify;
 }
