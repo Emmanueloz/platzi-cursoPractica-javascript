@@ -1,0 +1,47 @@
+/*Desktop*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+header {
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  padding-left: 10px;
+}
+
+main {
+  display: flex;
+  background-color: gray;
+  width: 100vw;
+  height: 90vh;
+  font-size: 1.8rem;
+}
+
+main aside{
+  width: 30%;
+  background-color: blueviolet;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+main section {
+  width: 70%;
+  background-color: aquamarine;
+  margin: 10px;
+  border-radius: 10px;
+}
