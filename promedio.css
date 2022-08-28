@@ -24,6 +24,12 @@ main form{
   border-radius: 10px;
   color: whitesmoke;
   background-color: #3f6b5d;
+  margin: 10px
+}
+
+main form h3 {
+  text-align: center;
+  margin: 5px 0px;
 }
 
 main form input{

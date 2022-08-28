@@ -44,4 +44,13 @@ main section {
   background-color: aquamarine;
   margin: 10px;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+main section .Taller {
+  background-color: red;
+  margin: 5px;
+  border-radius: 10px;
 }
