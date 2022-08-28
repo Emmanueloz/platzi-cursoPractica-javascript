@@ -1,7 +1,7 @@
-let lista = []
+let listaMediana = []
 
 function ordenarArray() {
-  let listaOrdenada = lista.sort(function (a, b) {
+  let listaOrdenada = listaMediana.sort(function (a, b) {
     return a - b;
   })
   return listaOrdenada;
@@ -9,6 +9,7 @@ function ordenarArray() {
 
 
 let mitadLista;
+let listaArrayMediana = document.getElementById("listaArrayMediana")
 
 function calculaMediaArithmetic(lista) {
   const sumaLista = lista.reduce(
@@ -21,7 +22,7 @@ function calculaMediaArithmetic(lista) {
   return promedio;
 }
 
-function mediaArray(Array){
+function medianaArray(Array){
   if (Array.length % 2 == 0) {
     console.log("Is par");
 
@@ -53,37 +54,34 @@ function agregarEnArray(nuevoValor, lista) {
 }
 
 function mostrarLista() {
-  let listaArray = document.getElementById("listaArray")
-
-  let ordenado = ordenarArray(lista)
-  listaArray.innerHTML = `${ordenado} <br> `
+  let ordenado = ordenarArray(listaMediana)
+  listaArrayMediana.innerHTML = `${ordenado} <br> `
 }
 
-function agregarValor() {
-  let input = document.getElementById("input");
+function agregarValorMediana() {
+  let input = document.getElementById("inputMediana");
   let inputValue = parseInt(input.value);
   console.log(inputValue);
-  let listaArray = document.getElementById("listaArray")
   if (isNaN(inputValue)) {
     console.log("Coloque números")
-    listaArray.innerHTML = `<b style='color:red'>Coloque números</b>`
+    listaArrayMediana.innerHTML = `<b style='color:red'>Coloque números</b>`
   }
   else {
-    agregarEnArray(inputValue, lista);
+    agregarEnArray(inputValue, listaMediana);
     mostrarLista();
   }
 }
 
 function calcularMediana() {
-  let ordenado = ordenarArray(lista)
+  let ordenado = ordenarArray(listaMediana)
   console.log(ordenado);
-  let mediana = mediaArray(ordenado)
+  let mediana = medianaArray(ordenado)
   let resultMediana = document.getElementById("resultMediana");
   resultMediana.innerHTML = `La mediana de la lista de números es de ${mediana}`
 }
 
-function resetarArray() {
-  listaArray.innerHTML = "Se mostrara los valores a calcular acá";
+function resetarArrayMediana() {
+  listaArrayMediana.innerHTML = "Se mostrara los valores a calcular acá";
   resultMediana.innerHTML = "La mediana se mostrara aquí"
   return lista = [];
 }
