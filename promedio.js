@@ -1,6 +1,6 @@
 // Lista vacía
 let arrayLista = [];
-let listaArray = document.getElementById("listaArray");
+let listaArrayPromedio = document.getElementById("listaArrayPromedio");
 let resultPromedio = document.getElementById("resultPromedio")
 
 // Calcular promedio
@@ -22,18 +22,18 @@ function agregarEnArray(nuevoValor, lista) {
 }
 
 // Obtener nuevo valor al array y mostrar en documento
-function agregarValor() {
-  let input = document.getElementById("input");
+function agregarValorPromedio() {
+  let input = document.getElementById("inputPromedio");
   let inputValue = parseInt(input.value);
 
   if (isNaN(inputValue)) {
-    listaArray.innerHTML = "<b style='color:red'>Coloca numero y no otro valor</b>"
+    listaArrayPromedio.innerHTML = "<b style='color:red'>Coloca numero y no otro valor</b>"
   }
   else {
     agregarEnArray(inputValue, arrayLista);
     console.log(arrayLista)
     for (lis of arrayLista) {
-      listaArray.innerHTML = `Valor: <br> ${arrayLista}`;
+      listaArrayPromedio.innerHTML = `Valor: <br> ${arrayLista}`;
     } 
   }
 }
@@ -48,8 +48,8 @@ function calcularPromedio() {
   resultPromedio.innerHTML = `El promedio es de ${promedio}`;
 }
 
-function resetarArray() {
-  listaArray.innerHTML = "Se mostrara los valores a calcular acá";
+function resetarArrayPromedio() {
+  listaArrayPromedio.innerHTML = "Se mostrara los valores a calcular acá";
   resultPromedio.innerHTML = "El promedio se mostrara aquí"
   return arrayLista = [];
 }
