@@ -46,11 +46,23 @@ main section {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-main section .Taller {
+main section .taller {
   background-color: red;
   margin: 5px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section .taller a {
+  color: black;
+  text-decoration: none;
+}
+
+main section #reto {
+  grid-column: 1 / 3;
 }
