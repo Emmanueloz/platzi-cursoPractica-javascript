@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Porcentajes y descuentos | Curso Práctica de JavaScript en Platzi</title>
-  <link rel="stylesheet" href="descuentos.css">
-</head>
-<body>
-  <header>
-    <h1>Porcentajes y descuentos</h1>
-    <p>Este es el segundo taller del Curso Práctica de JavaScript.</p>
-  </header>
-  <main>
-    <section>
-      <h2>Calcula el precio a pagar de tus productos con descuento</h2>
-  
-      <form action="">
-        <label for="InputPrice">Escribe el precio de tu producto:</label>
-        <br>
-        <input type="number" id="InputPrice"/>
-        <br>
-        <label for="InputDiscount">Escribe el descuento de tu producto:</label>
-        <br>
-        <input type="number" id="InputDiscount"/>
-        <br>
-        <button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con descuento</button>
-  
-        <p id="ResultP"></p>
-      </form>
-    </section>
-    <section>
-      <h2>Calcula el precio a pagar de tus productos con descuento por cupones</h2>
-  
-      <form action="">
-        <label for="InputPrice">Escribe el precio de tu producto:</label>
-        <br>
-        <input type="number" id="InputPriceCoupon"/>
-        <br>
-        <label for="InputCupon">Escribe el cupón de descuento:</label>
-        <br>
-        <input type="text" id="InputCoupon"/>
-        <br>
-        <button type="button" onclick="onClickButtonPriceDiscountCoupon()">Calcular el precio con descuento</button>
-  
-        <p id="ResultPC"></p>
-      </form>
-    </section>
-  </main>
-  
-  <script src="descuentos.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Porcentajes y descuentos | Curso Práctica de JavaScript en Platzi
+    </title>
+    <link rel="stylesheet" href="descuentos.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Porcentajes y descuentos</h1>
+        <p>Este es el segundo taller del Curso Práctica de JavaScript.</p>
+      </div>
+      <a href="index.html" class="Inicio">Regresar</a>
+    </header>
+    <main>
+      <section>
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+
+        <form action="">
+          <label for="InputPrice">Escribe el precio de tu producto:</label>
+          <br />
+          <input type="number" id="InputPrice" min="0" inputmode="numeric" />
+          <br />
+          <label for="InputDiscount"
+            >Escribe el descuento de tu producto:</label
+          >
+          <br />
+          <input type="number" id="InputDiscount" min="0" inputmode="numeric" />
+          <br />
+          <button type="button" onclick="onClickButtonPriceDiscount()">
+            Calcular el precio con descuento
+          </button>
+
+          <p id="ResultP"></p>
+        </form>
+      </section>
+      <section>
+        <h2>
+          Calcula el precio a pagar de tus productos con descuento por cupones
+        </h2>
+
+        <form action="">
+          <label for="InputPrice">Escribe el precio de tu producto:</label>
+          <br />
+          <input
+            type="number"
+            id="InputPriceCoupon"
+            min="0"
+            inputmode="numeric"
+          />
+          <br />
+          <label for="InputCupon">Escribe el cupón de descuento:</label>
+          <br />
+          <input type="text" id="InputCoupon" />
+          <br />
+          <button type="button" onclick="onClickButtonPriceDiscountCoupon()">
+            Calcular el precio con descuento
+          </button>
+
+          <p id="ResultPC"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="descuentos.js"></script>
+  </body>
 </html>
