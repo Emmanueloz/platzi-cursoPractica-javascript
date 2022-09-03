@@ -10,7 +10,58 @@ body {
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   margin: 0;
 }
 
+header {
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+main {
+  display: flex;
+  background-color: gray;
+  font-size: 1.6rem;
+}
+
+main aside{
+  width: 0%;
+  background-color: blueviolet;
+  margin: 10px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+main section {
+  width: 80%;
+  background-color: aquamarine;
+  margin: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+main section .taller {
+  background-color: red;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .taller a {
+  color: black;
+  text-decoration: none;
+  z-index: 1;
+}
+
+main section .taller a h3{
+  text-align: center;
+}
