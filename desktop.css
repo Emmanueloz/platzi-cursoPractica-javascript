@@ -1,0 +1,51 @@
+/*Desktop*/
+header {
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  padding-left: 10px;
+}
+
+main {
+  display: flex;
+  background-color: gray;
+  width: 100vw;
+  height: 90vh;
+  font-size: 1.8rem;
+}
+
+main aside{
+  width: 30%;
+  background-color: blueviolet;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+main section {
+  width: 70%;
+  background-color: aquamarine;
+  margin: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+main section .taller {
+  background-color: red;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section .taller a {
+  color: black;
+  text-decoration: none;
+}
+
+main section #reto {
+  grid-column: 1 / 3;
+}
