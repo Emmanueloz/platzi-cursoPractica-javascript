@@ -1,0 +1,26 @@
+header {
+  height: 60px;
+  padding-left: 10px;
+}
+
+main section{
+  max-width: 90%;
+  margin: 0 auto;
+  height: 900px;
+  padding: 5px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  display: flex;
+  flex-basis: 600px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+main section .taller {
+  background-color: red;
+  width: 45%;
+  height: 32%;
+  flex-grow: 1;
+  margin: 5px;
+}
