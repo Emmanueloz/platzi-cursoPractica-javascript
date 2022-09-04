@@ -25,3 +25,6 @@ Es el repositorio que usare para realizar el cursos JavaScript de platzi
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
 # curso-practico-javascript
+
+Curso Terminado
+![Diploma](img/diploma-javascript-practico-2021.pdf_1.jpg)
