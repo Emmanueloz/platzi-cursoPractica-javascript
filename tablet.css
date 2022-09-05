@@ -24,3 +24,7 @@ main section .taller {
   flex-grow: 1;
   margin: 5px;
 }
+
+main section .taller a figure{
+  
+}

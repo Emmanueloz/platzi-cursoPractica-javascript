@@ -54,11 +54,12 @@ main section .taller a {
   width: 100%;
   flex-direction: row;
   align-items: center;
+  padding: 5px;
 }
 
 main section .taller a figure {
   min-width: 60px;
-  margin: 20px;
+  margin: 5px;
   display: inline-block;
 }
 
