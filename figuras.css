@@ -34,14 +34,17 @@ header a {
 
 main .main-figuras {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  width: 100%;
+  padding: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 main .main-figuras .main-figuras__section {
   display: flex;
   flex-direction: column;
   background-color: #343333;
+  width: 80%;
   margin: 10px;
   padding: 20px;
   border-radius: 10px;
@@ -72,11 +75,25 @@ main .main-figuras .main-figuras__section .input {
   text-align: center;
   font-size: 1.8rem;
   color: whitesmoke;
-  width: 200px;
+  width: 80%;
   border-radius: 10px;
 }
 
 main .main-figuras .main-figuras__section p {
   display: inline-block;
   height: 40px;
+}
+@media (min-width: 760px){
+  main .main-figuras {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1020px){
+  main .main-figuras {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
