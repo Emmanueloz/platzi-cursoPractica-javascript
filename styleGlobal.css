@@ -1,0 +1,143 @@
+:root {
+  --main-color: #52a5e0;
+  --title-color: #eff3f5;
+  --text-color: #c8cdd0;
+  --light-text-color: #a0a7ac;
+  --border-color: #2a3b47;
+  --container-color: #212e36;
+  --body-color: #192229;
+  --font-size-title: 2.4rem;
+  --font-size-title_2: 2rem;
+  --font-size-text: 1.8rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--font-size-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-title);
+  text-align: center;
+  color: var(--title-color);
+  margin: 10px;
+}
+
+h2 {
+  text-align: left;
+  font-size: var(--font-size-title_2);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--font-size-text);
+  background-color: var(--container-color);
+  box-shadow: 1px 1px 1px 1px black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+main .main-figuras {
+  /* display: grid; */
+  width: 90%;
+  margin: 0px;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .main-figuras .main-figuras__section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  width: 80%;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main .main-figuras .main-figuras__section button {
+  width: 200px;
+  margin: 10px;
+  font-size: var(--font-size-text);
+  color: var(--text-color);
+  background-color: var(--body-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+main .main-figuras .main-figuras__section figure {
+  display: flex;
+  align-items: center;
+}
+
+main .main-figuras .main-figuras__section figure img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+main .main-figuras .main-figuras__section figure figcaption {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+main .main-figuras .main-figuras__section .input {
+  background-color: var(--container-color);
+  margin-top: 10px;
+  text-align: center;
+  font-size: var(--font-size-text);
+  color: var(--text-color);
+  width: 80%;
+  border-radius: 10px;
+}
+
+main .main-figuras .main-figuras__section p {
+  display: inline-block;
+  height: 40px;
+}
+@media (min-width: 760px) {
+  main .main-figuras {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+  main .main-figuras .main-figuras__section {
+    width: 35%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1020px) {
+  main .main-figuras {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+  main .main-figuras .main-figuras__section {
+    width: 35%;
+  }
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promedio</title>
-    <link rel="stylesheet" href="promedioMedianaModa.css" />
+    <link rel="stylesheet" href="styleGlobal.css" />
   </head>
   <body>
     <header>
@@ -13,66 +13,82 @@
       <a href="index.html" class="Inicio">Regresar ⬅️</a>
     </header>
     <main>
-      <form action="">
-        <h3>Promedio</h3>
-        <label for="input">
-          <span>Agregar un numero a la lista a calcular promedio</span>
+      <section class="main-figuras">
+        <form action="" class="main-figuras__section">
+          <h3>Promedio</h3>
+          <label for="input">
+            <span>Agregar un numero a la lista a calcular promedio</span>
+            <br />
+            <input type="number" id="inputPromedio" class="input"/>
+          </label>
           <br />
-          <input type="number" id="inputPromedio" />
-        </label>
-        <br />
-        <button id="pushArrayPromedio" type="button" onclick="agregarValorPromedio()">
-          Agregar numero
-        </button>
-        <button id="recetearListaPromedio" type="button" onclick="resetarArrayPromedio()">
-          Resetear lista
-        </button>
-        <p id="listaArrayPromedio">Se mostrara los valores a calcular acá</p>
-        <button type="button" onclick="calcularPromedio()">
-          Calcular promedio
-        </button>
-        <p id="resultPromedio">El promedio se mostrara aquí</p>
-      </form>
-      <form action="">
-        <h3>Mediana</h3>
-        <label for="input">
-          <span>Agregar un numero a la lista a calcular la Mediana</span>
+          <button
+            id="pushArrayPromedio"
+            type="button"
+            onclick="agregarValorPromedio()"
+          >
+            Agregar numero
+          </button>
+          <button
+            id="recetearListaPromedio"
+            type="button"
+            onclick="resetarArrayPromedio()"
+          >
+            Resetear lista
+          </button>
+          <p id="listaArrayPromedio">Se mostrara los valores a calcular acá</p>
+          <button type="button" onclick="calcularPromedio()">
+            Calcular promedio
+          </button>
+          <p id="resultPromedio">El promedio se mostrara aquí</p>
+        </form>
+        <form action="" class="main-figuras__section">
+          <h3>Mediana</h3>
+          <label for="input">
+            <span>Agregar un numero a la lista a calcular la Mediana</span>
+            <br />
+            <input type="number" id="inputMediana" class="input"/>
+          </label>
           <br />
-          <input type="number" id="inputMediana" />
-        </label>
-        <br />
-        <button id="pushArrayMedian" type="button" onclick="agregarValorMediana()">
-          Agregar numero
-        </button>
-        <button id="recetearListaMedian" type="button" onclick="resetarArrayMediana()">
-          Resetear lista
-        </button>
-        <p id="listaArrayMediana">Se mostrara los valores a calcular acá</p>
-        <button  type="button" onclick="calcularMediana()">
-          Calcular Mediana
-        </button>
-        <p id="resultMediana">La mediana se mostrara aquí</p>
-      </form>
-      <form action="">
-        <h3>Moda</h3>
-        <label for="input">
-          <span>Agregar un numero a la lista a calcular la Moda</span>
+          <button
+            id="pushArrayMedian"
+            type="button"
+            onclick="agregarValorMediana()"
+          >
+            Agregar numero
+          </button>
+          <button
+            id="recetearListaMedian"
+            type="button"
+            onclick="resetarArrayMediana()"
+          >
+            Resetear lista
+          </button>
+          <p id="listaArrayMediana">Se mostrara los valores a calcular acá</p>
+          <button type="button" onclick="calcularMediana()">
+            Calcular Mediana
+          </button>
+          <p id="resultMediana">La mediana se mostrara aquí</p>
+        </form>
+        <form action="" class="main-figuras__section">
+          <h3>Moda</h3>
+          <label for="input">
+            <span>Agregar un numero a la lista a calcular la Moda</span>
+            <br />
+            <input type="number" id="input" class="input"/>
+          </label>
           <br />
-          <input type="number" id="input" />
-        </label>
-        <br />
-        <button id="pushArray" type="button" onclick="agregarValor()">
-          Agregar numero
-        </button>
-        <button id="recetearLista" type="button" onclick="resetarArray()">
-          Resetear lista
-        </button>
-        <p id="listaArray">Se mostrara los valores a calcular acá</p>
-        <button type="button" onclick="calcularModa()">
-          Calcular Moda
-        </button>
-        <p id="resultModa">La mediana se mostrara aquí</p>
-      </form>
+          <button id="pushArray" type="button" onclick="agregarValor()">
+            Agregar numero
+          </button>
+          <button id="recetearLista" type="button" onclick="resetarArray()">
+            Resetear lista
+          </button>
+          <p id="listaArray">Se mostrara los valores a calcular acá</p>
+          <button type="button" onclick="calcularModa()">Calcular Moda</button>
+          <p id="resultModa">La mediana se mostrara aquí</p>
+        </form>
+      </section>
     </main>
     <script src="promedio.js"></script>
     <script src="mediana.js"></script>

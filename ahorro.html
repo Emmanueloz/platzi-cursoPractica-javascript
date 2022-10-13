@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capacidad de Ahorro</title>
-  <link rel="stylesheet" href="ahorro.css">
-</head>
-<body>
-  <header>
-    <h1>Calculadora capacidad de ahorro</h1>
-  </header>
-  <main>
-    <form class="formulario">
-      <label for="salarioMensual">
-        <span>Coloca tu salario mensual, para calcular tus ahorros con la <b>regla 50-30-20</b></span>
-        <br>
-        <input type="number" id="salarioMensual">
-      </label>
-      <br>
-      <button type="button" onclick="calcularAhorro()">Calcular descuento</button>
-      <section id="resultadoAhorro">
-        <p >Aquí aparecerá los porcentajes de su salario</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capacidad de Ahorro</title>
+    <link rel="stylesheet" href="styleGlobal.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora capacidad de ahorro</h1>
+      <a href="index.html" class="Inicio">Regresar ⬅️</a>
+    </header>
+    <main>
+      <section class="main-figuras">
+        <form class="main-figuras__section">
+          <label for="salarioMensual">
+            <span
+              >Coloca tu salario mensual, para calcular tus ahorros con la
+              <b>regla 50-30-20</b></span
+            >
+            <br />
+            <input type="number" id="salarioMensual" class="input"/>
+          </label>
+          <br />
+          <button type="button" onclick="calcularAhorro()">
+            Calcular descuento
+          </button>
+          <section id="resultadoAhorro">
+            <p>Aquí aparecerá los porcentajes de su salario</p>
+          </section>
+        </form>
       </section>
-    </form>
-  </main>
+    </main>
 
-  <script src="ahorro.js"></script>
-</body>
+    <script src="ahorro.js"></script>
+  </body>
 </html>
