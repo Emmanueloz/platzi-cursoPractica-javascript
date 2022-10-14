@@ -4,15 +4,9 @@ header {
   padding-left: 10px;
 }
 
-main {
-  background-color: gray;
-  font-size: 1.8rem;
-}
-
 main section{
   width: 1000px;
   height: 85vh;
-  background-color: aquamarine;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +15,6 @@ main section{
 }
 
 main section .taller {
-  background-color: red;
   width: 45%;
   height: 30%;
   margin: 5px 5px ;
@@ -35,8 +28,4 @@ main section #reto{
 main section .taller a {
   color: black;
   text-decoration: none;
-}
-
-footer {
-  height: 10vh;
 }

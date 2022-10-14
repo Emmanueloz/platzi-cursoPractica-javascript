@@ -1,4 +1,5 @@
 :root {
+  --header-color:#1c3547;
   --main-color: #52a5e0;
   --title-color: #eff3f5;
   --text-color: #c8cdd0;
@@ -41,6 +42,7 @@ h2 {
 }
 
 header {
+  background-color: var(--header-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
