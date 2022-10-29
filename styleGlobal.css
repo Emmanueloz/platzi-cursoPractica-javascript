@@ -122,6 +122,11 @@ main .main-figuras .main-figuras__section p {
   display: inline-block;
   min-height: 0px;
 }
+
+main .main-figuras .main-figuras__section p li {
+  margin-left: 20px;
+}
+
 @media (min-width: 760px) {
   main .main-figuras {
     flex-direction: row;
