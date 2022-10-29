@@ -22,13 +22,13 @@
           <h2>Calcula el precio a pagar de tus productos con descuento</h2>
           <label for="InputPrice">Escribe el precio de tu producto:</label>
           <br />
-          <input type="number" id="InputPrice" min="0" inputmode="numeric" class="input"/>
+          <input type="parseInt" id="InputPrice" min="0" inputmode="numeric" class="input"/>
           <br />
           <label for="InputDiscount"
             >Escribe el descuento de tu producto:</label
           >
           <br />
-          <input type="number" id="InputDiscount" min="0" inputmode="numeric" class="input"/>
+          <input type="parseInt" id="InputDiscount" min="0" inputmode="numeric" class="input"/>
           <br />
           <button type="button" onclick="onClickButtonPriceDiscount()">
             Calcular el precio con descuento
@@ -43,7 +43,7 @@
           <label for="InputPrice">Escribe el precio de tu producto:</label>
           <br />
           <input
-            type="number"
+            type="parseInt"
             id="InputPriceCoupon"
             min="0"
             inputmode="numeric"

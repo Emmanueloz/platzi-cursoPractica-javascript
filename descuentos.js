@@ -103,13 +103,13 @@ function onClickButtonPriceDiscountCoupon(){
   const discount = comparison(discountValue, cupones);
   let precioConDescuento;
 
-  let numberDiscount = typeof(discount)
-  if (numberDiscount === "number" && !isNaN(priceValue)) {
+  let parseIntDiscount = typeof(discount)
+  if (parseIntDiscount === "parseInt" && !isNaN(priceValue)) {
     precioConDescuento = calcularPrecioConDescuento(priceValue, discount);
     //console.log(precioConDescuento);
     resultP.innerHTML = `El precio con descuento por tu cupón es: <b>$${precioConDescuento}</b>`;
   }
-  else if (isNaN(priceValue) && numberDiscount !== "number") {
+  else if (isNaN(priceValue) && parseIntDiscount !== "parseInt") {
     resultP.innerHTML = `<b style='color:#d43131>Error: ${discount}, y coloque números en el campo correspondiente</b>`
   }
   else if (isNaN(priceValue)) {

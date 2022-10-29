@@ -74,6 +74,7 @@ main .main-figuras .main-figuras__section {
   flex-direction: column;
   background-color: var(--container-color);
   width: 80%;
+  min-height: 50%;
   margin: 10px 0;
   padding: 20px;
   border-radius: 10px;
@@ -108,17 +109,18 @@ main .main-figuras .main-figuras__section figure figcaption {
 
 main .main-figuras .main-figuras__section .input {
   background-color: var(--container-color);
-  margin-top: 10px;
+  margin-top: 20px;
+  margin: 0% 5%;
   text-align: center;
   font-size: var(--font-size-text);
   color: var(--text-color);
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
 }
 
 main .main-figuras .main-figuras__section p {
   display: inline-block;
-  height: 40px;
+  min-height: 0px;
 }
 @media (min-width: 760px) {
   main .main-figuras {
