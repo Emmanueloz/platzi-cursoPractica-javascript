@@ -28,3 +28,5 @@ Es el repositorio que usare para realizar el cursos JavaScript de platzi
 
 Curso Terminado
 ![Diploma](img/diploma-javascript-practico-2021.pdf_1.jpg)
+
+**Pagina desplegado desde la rama Test [aquí](https://emmanueloz.github.io/platzi-cursoPractica-javascript/index.html)**
