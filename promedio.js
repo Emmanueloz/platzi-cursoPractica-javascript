@@ -42,10 +42,14 @@ function agregarValorPromedio() {
 function calcularPromedio() {
   /* let input = document.getElementById("input");
   let inputValue = input.value; */
-
-  let promedio = calculaMediaArithmetic(arrayLista);
-  console.log(promedio);
-  resultPromedio.innerHTML = `El promedio es de ${promedio}`;
+  if (arrayLista.length == 0) {
+    listaArrayPromedio.innerHTML = "Agrega un valor"
+  }
+  else {
+    let promedio = calculaMediaArithmetic(arrayLista);
+    console.log(promedio);
+    resultPromedio.innerHTML = `El promedio es de ${promedio}`;  
+  }
 }
 
 function resetarArrayPromedio() {
