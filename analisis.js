@@ -35,7 +35,7 @@ function mostrarSalario() {
 
 function printCountry() {
   let countryName = country.value;
-  countryList.innerHTML = countryName;
+  countryList.innerHTML = `<b>${countryName}</b>`;
 }
 
 //outputs
